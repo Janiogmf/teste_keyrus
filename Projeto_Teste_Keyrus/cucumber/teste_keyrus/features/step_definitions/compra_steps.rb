@@ -10,16 +10,12 @@
     @home_produtos_page.incluir_carrinho
   end
   
-  Entao("validar inclusao no carrinho.") do
+  Entao("finalizar carrinho.") do
     @home_produtos_page.validar_inclusao
   end
   
   Entao("fazer cadastro do comprador com email {string} e cpf {string}.") do |email, cpf|
     @home_produtos_page.cadastro(email, cpf)
-  end
-
-  Entao("validar tela de resumo.") do
-    
   end
   
   Entao("finalizar pedido com boleto.") do
